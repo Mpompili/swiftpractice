@@ -10,6 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var counter: UILabel!
+    var number: Int = 0
+    @IBAction func perform(_ sender: UIButton) {
+        self.number += 1
+        self.counter.text = String(number)
+    }
+    @IBAction func reduce(_ sender: UIButton) {
+        number -= 1
+        self.counter.text = String(number)
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
